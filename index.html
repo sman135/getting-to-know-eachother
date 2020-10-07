@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <!--Author: Spencer Kolman-->
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/866f726221.js" crossorigin="anonymous"></script>
+    <title>Spencer Kolman</title>
+    <style>
+        @font-face {
+            font-family: San Francisco;
+            src: url(SF-Pro-Display-Light.otf);
+            }
+            * {
+                font-family: San Francisco;
+                }
+        body {font-family: San Francisco;}
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+        </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'introduction')" id="defaultOpen"><i class="fas fa-handshake" style="color:royalblue"></i> Introduction</button>
+        <button class="tablinks" onclick="openTab(event, 'transplant')"><i class="fas fa-heartbeat" style="color:crimson"></i> Transplant</button>
+        <button class="tablinks" onclick="openTab(event, 'pets')"><i class="fas fa-paw" style="color:saddlebrown"></i> Pets</button>
+      </div>
+      
+
+
+
+
+      <div id="introduction" class="tabcontent">
+        <h1 style="text-align:center;">
+            Spencer Kolman
+        </h1>
+        <p style="text-align:center;">
+            <a href="mailto:spencerfkolman@lewisu.edu">spencerfkolman@lewisu.edu</a>
+        </p>
+        <div style="text-align:center;">
+            <img src="spencer.jpg" alt="Spencer" style="width:360px;height:480px;">
+        </div>
+        <h2 style="text-align: center;">Introduction</h2>
+        <p>
+            Hi, I am Spencer Kolman. I am a sophomore at Lewis University and my major is Aviation 
+            Administration with a minor in Business. I have an older brother named Zach, and a younger 
+            sister named Eva. I have two cats named Nexus and Houston. I live in Hickory Hills, 
+            Illinois.
+        </p>
+        <h3>
+            What I Hope to Learn in this Course
+        </h3>
+        <ul style="list-style-type:square">
+            <li>
+                The ability to visualize what a webpage looks like by only looking at the source code.
+            </li>
+            <li>
+                How wireless data transfer works.
+            </li>
+            <li>
+                How to use most Terminal commands.
+            </li>
+        </ul>
+        <h3>
+            My Favorite Hobby
+        </h3>
+        <p>
+            I love aviation. I have been on airplanes ever since I was an infant and never cried during 
+            a flight. As a toddler I liked to play with toy airplanes. As I got older I started looking 
+            forward to trips on airplanes and expressed my interest in being a pilot. I came to Lewis 
+            University with the plan to become a pilot, but due to medical complications I could not 
+            medically qualify to pilot any aircraft. However, I didn't let that stop me from pursuing 
+            a career in the field of aviation. I am currently an aviation administration major.
+        </p>
+        <h3>
+            Greatest Innovations in Computing
+        </h3>
+        <ul style="list-style-type:square">
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Transistor" title="Go to the Wikipedia page for 
+                transistors">The transistor</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Graphical_user_interface" title="Go to the Wikip
+                edia page for graphical user interfaces">Graphical user interfaces</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/World_Wide_Web" title="Go to the Wikipedia page 
+                for the World Wide Web">The World Wide Web</a>
+            </li>
+        </ul>
+        <h3>
+            Fun Fact
+        </h3>
+        <p>
+            I was the only person in the United States to receive a double lung and heart transplant in 
+            2016.
+        </p>
+      </div>
+      
+
+
+
+
+      <div id="transplant" class="tabcontent">
+        <h1 style="text-align:center;">Transplant</h1>
+        <div style="text-align:center;">
+        <img src="spencer-with-dog.jpeg" alt="Spencer" style="width:360px;height:480px;">
+        </div>
+        <p>I had a transplant.</p>
+        <div style="text-align:center;">
+        <video controls>
+            <source src="ksdkreport.mp4" type="video/mp4">
+        </video>
+    </div>
+      </div>
+      
+
+
+
+
+      <div id="pets" class="tabcontent">
+        <h1 style="text-align:center;">Pets</h1>
+        <div style="text-align:center;">
+            <img src="nexus.jpeg" alt="Spencer" style="width:360px;height:480px;">
+            <img src="houston.jpeg" alt="Spencer" style="width:360px;height:480px;">
+        </div>
+        <p>I have two cats.</p>
+      </div>
+
+
+
+
+
+      <script>
+      function openTab(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
+</body>
+</html>
